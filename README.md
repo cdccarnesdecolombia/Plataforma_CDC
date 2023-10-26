@@ -1,2 +1,2 @@
-# Plataforma_CDC
-Esta es la plataforma de Carnes de Colombia en su V1 
+# Cotizador-CDC.io
+Esta es la plataforma de CDC para la cotización de productos.
