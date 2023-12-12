@@ -1080,10 +1080,11 @@
 
     <table id="tabla-variables-producto" class="tabla-variables-producto" onchange="buscarproducto()">
         <tr>
-            <th style="width: 170px;">Poste</th>
-            <th style="width: 150px;">Costo Sacrificio</th>
-            <th style="width: 150px;">Costo Posta</th>
-            <th style="width: 150px;">Eficiencia</th>
+		<th style="width: 170px;">Poste</th>
+            <th style="width: 100px;">Sacrificio</th>
+            <th style="width: 100px;">Posta</th>
+            <th style="width: 120px;">Eficiencia</th>
+            <th style="width: 140px;">Cliente</th>
         </tr>
         <tr>
             <td>
@@ -1107,6 +1108,12 @@
                 </select>
             </td>
             <td><input type="text" class="form-control" placeholder="0.0%" id="eficiencia"></td>
+		<td>
+                <select name="tipo-cliente" id="tipo-cliente" class="form-select">
+                    <option value="natural">Natural</option>
+                    <option value="corporativo">Corporativo</option>
+                </select>
+            </td>
 
         </tr>
     </table>
