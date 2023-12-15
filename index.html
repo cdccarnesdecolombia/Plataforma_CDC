@@ -737,6 +737,7 @@
 
             var productoselect =  document.getElementById("productoselect");
             var idseleccion = Number(productoselect.value) - 1;
+		var tipoCliente = document.getElementById("tipo-cliente").value;
 
             var producto = data[idseleccion].Productos;
             var precio = Number(data[idseleccion].Precio);
