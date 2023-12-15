@@ -13,7 +13,7 @@
     
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #F0E51C;">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFFFFF;">
         <div class="container-fluid">
             <a class="navbar-brand">
                 <img src="CDC/Logo-CDC-circulo-negro.png" width="40" height="40" class="d-inline-block align-text-top">
@@ -740,6 +740,11 @@
 
             var producto = data[idseleccion].Productos;
             var precio = Number(data[idseleccion].Precio);
+		var precioCorp = Number(data[idseleccion].PrecioCorp);
+            if (tipoCliente == "Corporativo"){
+                precio = precioCorp;
+            };
+		
             var codigoproducto = data[idseleccion].Codigo;
             var costocarne = Number(data[idseleccion].Costo);
             var Linea = data[idseleccion].Línea;
