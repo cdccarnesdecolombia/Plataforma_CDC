@@ -302,7 +302,12 @@
 
             //Crear PDF
             const doc = new jsPDF();
-            var columns = ["COD", "Linea", "Producto", "Precio Unitario", "Cantidad", "% Descuento", "TOTAL"];
+	// Establecer el color de fondo
+		doc.setDrawColor(0, 0, 0);
+	// Rellenar toda la página con el color de fondo
+		doc.rect(0, 0, doc.internal.pageSize.width, doc.internal.pageSize.height, 'F');
+		
+            var columns = ["COD", "Linea", "Producto", "Precio Unitario", "Cantidad", "TOTAL"];
             doc.autoTable(columns,productosCotizados,
                 { margin:{ top: 90 }, align: 'center'}
             );
