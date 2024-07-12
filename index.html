@@ -300,10 +300,10 @@
 
             //Crear PDF
             const doc = new jsPDF();
-	// Establecer el color de fondo
-		doc.setDrawColor(0, 0, 0);
-	// Rellenar toda la página con el color de fondo
-		doc.rect(0, 0, doc.internal.pageSize.width, doc.internal.pageSize.height, 'F');
+		// Establecer el color de fondo
+			doc.setDrawColor(0, 0, 0);
+		// Rellenar toda la página con el color de fondo
+			doc.rect(0, 0, doc.internal.pageSize.width, doc.internal.pageSize.height, 'F');
 		
             var columns = ["Producto", "Precio Unitario", "Kilogramos", "TOTAL"];
             doc.autoTable(columns,productosCotizados,
