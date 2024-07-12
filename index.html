@@ -284,8 +284,6 @@
 
             //Fila de total
             TotalDescuento = tableresumen.rows[rowCount -1].cells[1].innerHTML;
-            temp =["","","","","","DESCUENTO",TotalDescuento];
-            productosCotizados.push(temp);
             Total = tableresumen.rows[rowCount -1].cells[8].innerHTML;
             temp =["","","","","","TOTAL",Total];
             productosCotizados.push(temp);
@@ -307,12 +305,12 @@
 	// Rellenar toda la página con el color de fondo
 		doc.rect(0, 0, doc.internal.pageSize.width, doc.internal.pageSize.height, 'F');
 		
-            var columns = ["COD", "Linea", "Producto", "Precio Unitario", "Cantidad", "TOTAL"];
+            var columns = ["Producto", "Precio Unitario", "Kilogramos", "TOTAL"];
             doc.autoTable(columns,productosCotizados,
-                { margin:{ top: 90 }, align: 'center'}
-            );
-		doc.setFillColor(0, 0, 0); // Color negro (RGB 0, 0, 0)
-
+                { margin:{ top: 90 }, align: 'center', styles: {
+    			fillColor: 0, 0, 0,
+    			textColor: 255, 255, 0,}
+            		);
 
             var imgHeader = new Image();
             imgHeader.src = 'CDC/header_cotizacion.png';
