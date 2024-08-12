@@ -156,12 +156,10 @@
             var margentotal = 0;
 
             var productoselect =  document.getElementById("productoselect");
-            var idseleccion = Number(productoselect.value) - 1;
-		var tipoCliente = document.getElementById("tipo-cliente").value;
+            var idseleccion = Number(productoselect.value) - 1; var tipoCliente = document.getElementById("tipo-cliente").value;
 
             var producto = data[idseleccion].Productos;
-            var precio = Number(data[idseleccion].Precio);
-		var precioCorp = Number(data[idseleccion].PrecioCorp);
+            var precio = Number(data[idseleccion].Precio);var precioCorp = Number(data[idseleccion].PrecioCorp);
             if (tipoCliente == "Corporativo"){
                 precio = precioCorp;
             };
